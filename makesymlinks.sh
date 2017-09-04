@@ -1,7 +1,7 @@
 ####### Variables
 
 dir=~/dotFiles
-files="vimrc zshrc"
+files="vimrc zshrc tmux.conf"
 
 ####### Loop creating symlink 
 for file in $files; do
