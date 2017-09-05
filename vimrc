@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end() 
 filetype plugin indent on           " filetype detection[ON] plugin[ON] indent[ON]
@@ -29,6 +30,7 @@ set shiftround                      " always indent/outdent to the nearest tabst
 set expandtab                       " use spaces instead of tabs
 set smarttab                        " use tabs at the start of a line, spaces elsewhere
 set nowrap                          " don't wrap text
+set noshowmode                      " Remove vim status line at bottom
 
 " NERDTree Settings "
 autocmd vimenter * NERDTree                                                                           " open a NERDTree automatically when vim starts up
@@ -55,3 +57,14 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
+" Lightline configuration
+let g:lightline = {
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head',
+      \ },
+      \ }
