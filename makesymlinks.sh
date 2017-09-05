@@ -16,13 +16,14 @@ vundle_path=~/.vim/bundle/Vundle.vim
 
 ####### Loop creating symlink 
 for file in $files; do
-  echo "Moving any existing dotfiles from ~ to $dir"
-  mv ~/.$file ~/$dir/
-  echo "Creating symlink to $file in home directory."
-  ln -s $dir/$file ~/.$file
+  if [ ! -f ~/.$file ]; then
+    echo "Moving any existing dotfiles from ~ to $dir"
+    mv ~/.$file ~/$dir/
+    echo "Creating symlink to $file in home directory."
+    ln -s $dir/$file ~/.$file
+  fi
 done
 
 if [ ! -d $vundle_path ];
   then git clone $vundle_link $vundle_path
-  else echo "No need to clone file already exists"
 fi
