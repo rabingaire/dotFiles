@@ -27,3 +27,15 @@ done
 if [ ! -d $vundle_path ];
   then git clone $vundle_link $vundle_path
 fi
+
+######## Adding theme to vim
+
+theme_name=Tomorrow-Night-Eighties.vim
+
+if [ ! -d ~/.vim/colors/ ]; then
+  mkdir ~/.vim/colors/
+fi
+
+if [ ! -f ~/.vim/colors/$theme_name ]; then
+  ln -s $dir/vim/colors/$theme_name ~/.vim/colors/$theme_name
+fi
