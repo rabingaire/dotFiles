@@ -7,7 +7,8 @@ dotFiles from my machine :)
 2. Run the following commands on terminal
 ```
 cd ./dotFile/
-chmod +x makesymlinks.sh
-./makesymlinks.sh
+chmod +x run.sh
+./run.sh
 ```
-3. Now Figure out yourself how to use the files under this repo LOL :)
+3. NOTE: No need to install vim, zsh and tmux this script automatically does that :) 
+4. Now Figure out yourself how to use the files under this repo LOL :)
