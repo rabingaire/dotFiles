@@ -7,6 +7,7 @@ for software in $softwares; do
   fi
 done
 
+
 ####### Variables
 
 dir=~/dotFiles
