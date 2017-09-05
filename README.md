@@ -12,3 +12,6 @@ chmod +x run.sh
 ```
 3. NOTE: No need to install vim, zsh and tmux this script automatically does that :) 
 4. Now Figure out yourself how to use the files under this repo LOL :)
+
+### Screenshot
+![ScreenShot](./screenshot.png)
