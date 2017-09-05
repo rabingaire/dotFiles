@@ -2,6 +2,7 @@
 
 dir=~/dotFiles
 files="vimrc zshrc tmux.conf"
+vundle_link="https://github.com/VundleVim/Vundle.vim.git"
 
 ####### Loop creating symlink 
 for file in $files; do
@@ -12,4 +13,4 @@ for file in $files; do
 done
 
 # cloning vundle 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone $vundle_link ~/.vim/bundle/Vundle.vim
